@@ -7,7 +7,7 @@ include:
 
 nginx_packages:
   pkg.installed:
-  - names: {{ server.pkgs }}
+  - names: {{ server.pkgs|yaml }}
 
 {%- if server.get('extras', False) %}
 nginx_extra_packages:
